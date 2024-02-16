@@ -23,19 +23,19 @@ z = 7;
 //assignment
 
 int x = 1;                          
-//integer - whole number values
+//integer; whole number values
 
 double y = 1.5;                 
-//doubles - numbers with decimals
+//doubles; numbers with decimals
 
 char n = 'N';                   
-//chars - single charectures
+//chars; single charectures
 
 bool yes = true;                
-//booleans - true or false
+//booleans; true or false
 
 std::string hello = "Hello";    
-//strings - list of chars put together, can make words
+//strings; list of chars put together, can make words
 
 /*
 ---------------------------PRINTING2CONSOLE--------------------------
@@ -57,7 +57,7 @@ std::cout << "How old are you?: ";                              //asking for inp
 std::cin >> age;                                                //receiveing input
 std::cout << "How tall are you?: "; 
 std::cin >> height; 
-//std::getline(std::cin, height);                                 for when input might have spaces
+//std::getline(std::cin, height);                               asking for two inputs back to back
 
 std::cout << "You are " << age << " years old and " << height << " feet tall!" << std::endl;    
 
@@ -65,33 +65,33 @@ std::cout << "You are " << age << " years old and " << height << " feet tall!" <
 -------------------------ARITHMETIC_OPERATIONS------------------------
 */
 
-x = x + 1; //addition
+x = x + 1;  //addition
 x+=1; 
 x++; 
 
-x = x - 1; //subtraction
+x = x - 1;  //subtraction
 x-=1; 
 x--;
 
-x = x * 2; //multiplication
+x = x * 2;  //multiplication
 x*=2; 
 
-x = x / 2; //division
+x = x / 2;  //division
 x/=2; 
 
 x+=6; 
 z = x % 2;  //mod (remiander of first value / second value)
 
 /*
-everything under here requires the header #include <cmath>
+everything under here requires the header #include <cmath> -----------
 */
 
-pow(x, 4); //first value to power of second value
-sqrt(x);   //square root of a value
-z = abs(-x);   //absolute value of a value
-z = round(y);  //round a value
-z = ceil(y);   //round a value up 
-z = floor(y);  //round a value down
+pow(x, 4);              //first value to power of second value
+sqrt(x);                //square root of a value
+z = abs(-x);            //absolute value of a value
+z = round(y);           //round a value
+z = ceil(y);            //round a value up 
+z = floor(y);           //round a value down
 
 std::max(x, (int)y);    //maximum value from 2 or more values
 std::min(x, (int)y);    //minimum value from 2 or more values
@@ -147,5 +147,5 @@ const std::string LAST_NAME = "Gonzalez";   //standard naming - all caps
 
 //make sure to use them whenver possible! 
 
-return 0; //for debugging, returns 0 if program doesnt run everything its supposed to
+return 0; //for debugging; returns 0 if program doesnt run everything its supposed to
 }

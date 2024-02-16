@@ -40,7 +40,7 @@ for (int i = 1; i < 4; i++)                     //will loop 3 times
 {
     for(int j = 1; j < 5; j++)                  //will loop 4 times
     {
-        std::cout << "*";                       //nested loop will 12 times
+        std::cout << "*";                       //nested loop will 12 times total
     }
     std::cout << '\n';
 }

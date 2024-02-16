@@ -3,10 +3,9 @@
 /*
 many times used with logical operators a list is below of all logicall operators
 
-&& and
-|| or
-!  reverses the outcome (if true evaluates false)
-
+&&; and
+||; or
+! ; not
 */
 
 int main ()
