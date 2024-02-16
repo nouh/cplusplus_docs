@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector> 
 
-typedef std::vector<std::pair<std::string, int>> pairlist_t; //very complex and long data type
-//standard writing convention is to add a _t at the end of your typedef name
+typedef std::vector<std::pair<std::string, int>> pairlist_t; 
+//standard writing convention adds _t at end of typedef name
 
 namespace first
 {
-    pairlist_t pairlist;                                     //that we can now declair very easily
+    pairlist_t pairlist;                                     //can now declair with the typedef name
 
     int x = 1;
 }
@@ -18,27 +18,20 @@ namespace second
 
 int main ()
 {
-    int x = 0;                          //by default we will use the values given in out main function
+    int x = 0;                          //by default computer uses values given in main function
     std::cout << x << std::endl;
 
-    std::cout << first::x << std::endl; //we can call different values from different name spaces
+    std::cout << first::x << std::endl; //can call different values from name spaces
 
-    using namespace second;             //the keyword using makes it so we whatever method youre in
-    std::cout << x << std::endl;        //from then on use the values from the specified name space
+    using namespace second;             //keyword using - changes default values to new specified ones
+    std::cout << x << std::endl;
 
-    using std::cout;                    //the using keyword also allows us to cut down on some typing
+    using std::cout;                    
     using std::string;
     using std::endl;                  
     
-    string name = "Noah"; 
+    string name = "Noah";               //example of keyword using in other contexts
     cout << name << endl; 
 }
 
-/*
-typedefs will only work in their respective files, but does not need to be called or specified
-namespaces will also only work in their respective files but do need to be called or specified
-the using keyword will only work in its respective method, almost like a header to a method
-
-headers seen in 
-*/
 

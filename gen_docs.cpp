@@ -5,18 +5,22 @@
 
 #include <iostream> //access to std:: + more!
 #include <cmath>    //more math functions
-#include <vector>   //
+#include <vector>   //idrk what this does tbh
+#include <ctime>    //random numbers
 
 
-int main ()
+int main ()         //main method
 {
 
 /*
-------------------------VARIABLE_DATA_TYPES------------------------
+-----------------------VARIABLES+DATA_TYPES------------------------
 */
 
 int z;                              
 //declaration 
+
+z = 7;
+//assignment
 
 int x = 1;                          
 //integer - whole number values
@@ -33,28 +37,8 @@ bool yes = true;
 std::string hello = "Hello";    
 //strings - list of chars put together, can make words
 
-
 /*
---------------------------TYPE_CONVERSIONS---------------------------
-*/
-
-char d = 100; 
-//implicit, program does this by itself
-
-d = x + (int)y; 
-//explicit, sepcified conversion before value
-
-/*
---------------------------------CONST--------------------------------
-*/
-
-const std::string NAME = "Noah";            //these variables cannot be changed
-const std::string LAST_NAME = "Gonzalez";   //standard naming - all caps
-
-//make sure to use them whenver possible! 
-
-/*
----------------------------PRINTING/CONSOLE--------------------------
+---------------------------PRINTING2CONSOLE--------------------------
 */
 
 std::cout << "This is a documentation file!"; //next thing printed will be on same line
@@ -63,14 +47,19 @@ std::cout << hello << " World!";              //printing variables + text
 std::cout << '\n';                            //next line
 
 /*
-------------------------------USER_INPUT-----------------------------
+--------------------------USER_INPUT(CONSOLE)-------------------------
 */
 
-int age;                                                        
+int age;     
+std::string height;                                                    
 
 std::cout << "How old are you?: ";                              //asking for input
 std::cin >> age;                                                //receiveing input
-std::cout << "You are " << age << " Years old!" <<std::endl;
+std::cout << "How tall are you?: "; 
+std::cin >> height; 
+//std::getline(std::cin, height);                                 for when input might have spaces
+
+std::cout << "You are " << age << " years old and " << height << " feet tall!" << std::endl;    
 
 /*
 -------------------------ARITHMETIC_OPERATIONS------------------------
@@ -110,73 +99,53 @@ std::min(x, (int)y);    //minimum value from 2 or more values
 //more math functions at cplusplus.com/reference/cmath
 
 /*
------------------------------IF_STATMENTS-----------------------------
+--------------------------STRING_FUNCTIONS---------------------------
 */
+
+hello.length(); 
+//returns number of charectures in a string
+
+hello.empty();
+//returns false if string has 0 charectures, true if string has > 0 charectures
+
+hello.clear(); 
+//clear method, clears a string
+
+hello.append("Hello"); 
+//appends text in parenthesis to end of given string
+
+hello.at(0); 
+//returns the char at a given index
+
+hello.insert(4,  " World");
+//inserts a string at given index
+
+hello.find('N'); 
+//returns index(s) of given char in a string
+
+hello.erase(5, 10);
+//erases specified charectures in given string 
+
+//more string fuctions at cplusplus.com/reference/string
 
 /*
-many times used with logical operators a list is below of all logicall operators
-
-&& and
-|| or
-!  reverses the outcome (if would be true is now false)
+--------------------------TYPE_CONVERSIONS---------------------------
 */
 
-if (true)
-{
-    std::cout << ":)" << std::endl;     //runs if condition in parentesis evaluates true
-} else if (false)
-{
-    std::cout << ":(" << std::endl;     //runs if first condition is false, and statment in parenthesis is true
+char d = 100; 
+//implicit, program does this by itself
 
-} else
-{
-    std::cout << "-_-" << std::endl;    //runs if nothing else evaluates true
-}
+d = x + (int)y; 
+//explicit, sepcified conversion before value
 
 /*
-----------------------------TERNARY_OPERATOR----------------------------
+--------------------------------CONST--------------------------------
 */
 
-//condition ? expression 1 : expression 2
-//replacement for an if else statment
+const std::string NAME = "Noah";            //these variables cannot be changed
+const std::string LAST_NAME = "Gonzalez";   //standard naming - all caps
 
-age < 18 ? std::cout << "You are a minor" << std::endl : std::cout << "You are an adult" << std::endl; 
-
-/*
---------------------------------SWITCHES--------------------------------
-*/
-
-int day; 
-
-std::cout << "What day of the week is it? (1-7): " << std::endl;
-std::cin >> day; 
-
-switch(day){                                            //switch (variable) {}
-    case 1:
-        std::cout << "Its Sunday!" << std::endl;        //case (possible instance of variable):
-        break;                                          //leaving switch
-    case 2:
-        std::cout << "Its Monday!" << std::endl; 
-        break;
-    case 3:
-        std::cout << "Its Tuesday!" << std::endl;
-        break;
-    case 4:
-        std::cout << "Its Wednesday!" << std::endl; 
-        break; 
-    case 5:
-        std::cout << "Its Thursday!" << std::endl; 
-        break;
-    case 6:
-        std::cout << "Its Friday!" << std::endl; 
-        break;
-    case 7:
-        std::cout << "Its Saturday!" << std::endl; 
-        break;
-    default:                                           //if nothing evaluates true
-        std::cout << "Please enter a number 1-7" << std::endl; 
-        break;
-}
+//make sure to use them whenver possible! 
 
 return 0; //for debugging, returns 0 if program doesnt run everything its supposed to
 }
