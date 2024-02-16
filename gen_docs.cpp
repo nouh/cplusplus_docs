@@ -8,7 +8,6 @@
 #include <vector>   //idrk what this does tbh
 #include <ctime>    //random numbers
 
-
 int main ()         //main method
 {
 
@@ -83,7 +82,7 @@ x+=6;
 z = x % 2;  //mod (remiander of first value / second value)
 
 /*
-everything under here requires the header #include <cmath> -----------
+under here requires the header #include <cmath> ---------------------
 */
 
 pow(x, 4);              //first value to power of second value
@@ -95,6 +94,19 @@ z = floor(y);           //round a value down
 
 std::max(x, (int)y);    //maximum value from 2 or more values
 std::min(x, (int)y);    //minimum value from 2 or more values
+
+/*
+under here requires the header #include <ctime> ---------------------
+*/
+
+//pseudo random, not fully random (but very close)
+
+srand(time(NULL));      //initialise random number generator srand(seed(NULL));
+//                        uses the current time as a seed for random numbers
+
+z = rand();             //generates a random number between 0-3231
+z = rand() % 6;         //generates a random number between 0-5
+z = (rand() % 6) +1;    //generates a random number between 1-6
 
 //more math functions at cplusplus.com/reference/cmath
 
