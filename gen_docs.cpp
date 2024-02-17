@@ -7,6 +7,7 @@
 #include <cmath>    //more math functions
 #include <vector>   //idrk what this does tbh
 #include <ctime>    //random numbers
+#include <iomanip>  //precision for floating point numbers
 
 int main ()         //main method
 {
@@ -37,6 +38,16 @@ std::string hello = "Hello";
 //strings; list of chars put together, can make words
 
 /*
+Local variables
+a varaibale declaired locally, only anything in its same set of curly braces can see it
+
+Global variables
+Varaibles declaired outside any  function, any function can see and use these
+- to use a global variable use the scope reseluton operator before the varibale (ex. ::num)
+- best to avoid when possible as it polutes the global namespace and they are less secure
+*/
+
+/*
 ---------------------------PRINTING2CONSOLE--------------------------
 */
 
@@ -46,7 +57,7 @@ std::cout << hello << " World!";              //printing variables + text
 std::cout << '\n';                            //next line
 
 /*
---------------------------USER_INPUT(CONSOLE)-------------------------
+--------------------------USER_INPUT(CONSOLE)------------------------
 */
 
 int age;     
@@ -59,6 +70,9 @@ std::cin >> height;
 //std::getline(std::cin, height);                               asking for two inputs back to back
 
 std::cout << "You are " << age << " years old and " << height << " feet tall!" << std::endl;    
+
+std::cin.clear();               //will reset any error flags when std::cin fails to interperet the input
+fflush(stdin);                  //will clear the input buffer
 
 /*
 -------------------------ARITHMETIC_OPERATIONS------------------------
@@ -101,7 +115,7 @@ under here requires the header #include <ctime> ---------------------
 
 //pseudo random, not fully random (but very close)
 
-srand(time(NULL));      //initialise random number generator srand(seed(NULL));
+srand(time(NULL));      //initialize random number generator srand(seed(NULL));
 //                        uses the current time as a seed for random numbers
 
 z = rand();             //generates a random number between 0-3231
