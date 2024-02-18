@@ -2,9 +2,6 @@
 
 int main()
 {
-/*
--------------------------ARITHMETIC_OPERATIONS------------------------
-*/
     int x = 1;
     double y = 1.5;
     int z = 0;
@@ -55,3 +52,4 @@ int main()
 
     //more math functions at cplusplus.com/reference/cmath
 }
+

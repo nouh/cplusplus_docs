@@ -44,6 +44,12 @@ int main()
     //sizeof(array)/sizeof(arrays data type)
 
 /*
+--------------------FILLING_ARRAY_WITH_USER_INPUT---------------------
+*/
+
+//refer to "console.cpp"
+
+/*
 -----------------------------FILL_FUNCTION------------------------------
 */
     /*
@@ -74,19 +80,6 @@ int main()
         std::cout << full_name[i] << '\n';
     }
 
-/*
---------------------------------FOR_EACH--------------------------------
-*/
-
-    //less syntax than normal for loops, but much less flexible
-    //must iterate through each elemnt of the array
-
-    int nums[] = {1, 2, 3, 4, 5, 6};
-
-    for (int num : nums)
-    {
-        std::cout << num << '\n'; 
-    }
 
 /*
 -----------------------PASSING_ARRAYS_TO_FUNCTIONS-----------------------

@@ -29,4 +29,35 @@ int main()
 
     std::cin.clear();               //will reset any error flags when std::cin fails to interperet the input
     fflush(stdin);                  //will clear the input buffer
+
+
+/*
+--------------------FILLING_ARRAY_WITH_USER_INPUT---------------------
+*/
+
+    std::string cars[5];                            //arrays are static data structures
+    int size = sizeof(cars)/sizeof(cars[0]);        //this means that when our programn is running we cannot change 
+    std::string temp;                               //the size of the array
+
+    for (int i = 0; i < size; i++)                
+    {
+        std::cout << "Enter a food you like or 'q' to quit #" << i + 1<< ": ";
+        std::getline(std::cin, temp); 
+
+        if(temp == "q")                             //so that we dont add q to our array if the user quits
+        {
+            break; 
+        } else
+        {
+            cars[i] == temp;
+        }
+    }
+
+    std::cout << "You like the following cars: \n";
+
+    for (int i = 0; cars[i].empty(); i++)           //traversing the array, but leaving out the empty spaces
+    {
+        std::cout << cars << '\n'; 
+    }
 }
+

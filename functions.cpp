@@ -13,7 +13,7 @@ void; will not return anything
 //(arguments and defining)
 
 void hello_world(std::string name, int age);    //declaration (declair functions before calling them)
-int favorite_num(int num);                      //declartaion (declair functions before calling them)
+int favorite_num(int num);                      //if the function is under where you first call it
 
 int main()                                      //this is the main function
 {
@@ -39,3 +39,4 @@ int favorite_number(int num)
 {
     return num;                                 //returns given value
 }
+
