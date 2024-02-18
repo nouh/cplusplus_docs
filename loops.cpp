@@ -49,7 +49,7 @@ for (int i = 1; i < 4; i++)                     //will loop 3 times
 --------------------------------FOR_EACH--------------------------------
 */
     //less syntax than normal for loops, but much less flexible
-    //must iterate through each element of the traversable data type
+    //must iterate through each elemnt of the traversable data type
 
     int nums[] = {1, 2, 3, 4, 5, 6};
 
@@ -60,3 +60,4 @@ for (int i = 1; i < 4; i++)                     //will loop 3 times
 
 return 0;
 }
+

@@ -23,7 +23,7 @@ int main()
     std::cin >> age;                                                //receiveing input
     std::cout << "How tall are you?: "; 
     std::cin >> height; 
-    //std::getline(std::cin, height);                               asking for two inputs back to back
+    //std::getline(std::cin, height);                               when input may contain spaces
 
     std::cout << "You are " << age << " years old and " << height << " feet tall!" << std::endl;    
 

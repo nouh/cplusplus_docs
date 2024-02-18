@@ -2,14 +2,18 @@
 
 int main()
 {
+
+/*
+-------------------------------ARRAYS---------------------------------
+*/
     /*
     array = a data structure that can hold multiple values
     values are accessed by an index number
     like a varaible that holds multiple values
     */
 
-    std::string car[] = {"Corvette", "Miata", "Supra"};     //(data type) (array name)[] = {elements in array};
-    std::string full_name[3];                               //array with no predetermined elements; static data structure
+    std::string car[] = {"Corvette", "Miata", "Supra"};     //(data type) (array name)[] = {elemnts in array};
+    std::string full_name[3];                               //array with no predetermined elemnts; static data structure
     //                                                        (data type) (array name)[size of array];
 
     full_name[0] = "Noah";                                  //assigning values to empty array
@@ -17,9 +21,9 @@ int main()
     full_name[2] = "Gonzalez"; 
 
     std::cout << car << std::endl;                          //display a memory adress (where the array is located)
-    std::cout << car[0];                                    //display first element in the array
+    std::cout << car[0];                                    //display first elemnt in the array
 
-    car[0] = "Honda Pilot";                                 //reasigning value of an element in an array
+    car[0] = "Honda Pilot";                                 //reasigning value of an elemnt in an array
 
 
 /*
@@ -36,8 +40,30 @@ int main()
     std::cout << sizeof(bool) << std::endl;         //bool; will always be 8 bytes large
     std::cout << sizeof(std::string) << std::endl;  //string; will always be 8 bytes large
 
-    //can be used to calculate how many elements are in an array
+    //can be used to calculate how many elemnts are in an array
     //sizeof(array)/sizeof(arrays data type)
+
+/*
+-----------------------------FILL_FUNCTION------------------------------
+*/
+    /*
+    fill; fills a rang of elements with a specified value
+    fill(begin, end, value)
+    begin; begging adress of an array 
+    end;   ending adress of an array
+    */
+
+    const int SIZE = 60; 
+    std::string food[SIZE];
+
+    fill(food, food + (SIZE/3), "Mac'n'Cheese");        //will fill first third the array with macncheese
+    fill(food + (SIZE/3), food + 2*(SIZE/3), "Chicken wings");
+    fill(food + 2*(SIZE/3), food + SIZE, "Sweet Bread");
+
+    for(std::string foods : food)
+    {
+        std::cout << food << '\n'; 
+    }
 
 /*
 ------------------------ITTERATING_OVER_AN_ARRAY-------------------------
@@ -53,7 +79,7 @@ int main()
 */
 
     //less syntax than normal for loops, but much less flexible
-    //must iterate through each element of the array
+    //must iterate through each elemnt of the array
 
     int nums[] = {1, 2, 3, 4, 5, 6};
 
@@ -80,3 +106,4 @@ void function(double prices[], int size)                //definition does need s
         std::cout << prices[i] << '\n'; 
     }
 }
+
