@@ -43,6 +43,8 @@ int main()
     //can be used to calculate how many elemnts are in an array
     //sizeof(array)/sizeof(arrays data type)
 
+    //for more imformation on bytes see "memory_adress.cpp"
+
 /*
 --------------------FILLING_ARRAY_WITH_USER_INPUT---------------------
 */

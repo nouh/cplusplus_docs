@@ -2,9 +2,6 @@
 
 int main ()
 {
-/*
---------------------------STRING_FUNCTIONS---------------------------
-*/
     std::string hello = "Hello";
     //string declaration
 

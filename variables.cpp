@@ -43,13 +43,5 @@ int main()
     d = x + (int)y; 
     //explicit, sepcified conversion before value
 
-/*
---------------------------------CONST--------------------------------
-*/
-
-    const std::string NAME = "Noah";            //these variables cannot be changed
-    const std::string LAST_NAME = "Gonzalez";   //standard naming - all caps
-
-    //make sure to use them whenver possible! 
 }
 
