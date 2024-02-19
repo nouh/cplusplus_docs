@@ -40,3 +40,8 @@ int favorite_number(int num)
     return num;                                 //returns given value
 }
 
+/*
+-----------------------PASSING_STRUCT_AS_ARGUMENT------------------------
+*/
+
+//see "structs.cpp"
